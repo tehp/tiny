@@ -8,5 +8,9 @@
             "email": "maccraig98@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/php-invoker": "^1.1",
+        "phplint/phplint": "^0.0.1"
+    }
 }

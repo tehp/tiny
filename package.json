@@ -1,0 +1,20 @@
+{
+  "name": "tiny",
+  "version": "1.0.0",
+  "description": "BCTHC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "scss --update public/scss:public/css",
+    "dev": "scss --watch public/scss:public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tehp/tiny.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tehp/tiny/issues"
+  },
+  "homepage": "https://github.com/tehp/tiny#readme"
+}
