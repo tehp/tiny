@@ -2,9 +2,9 @@
 BC Tiny House Collective
 
 #### NPM Scripts
-test: 'npm run test'<br>
-build: 'npm run build'<br>
-dev: 'npm run dev'<br>
+test: `npm run test`<br>
+build: `npm run build`<br>
+dev: `npm run dev`<br>
 
 #### Color Palette
 Very Dark Grey: `#1F1913`<br>
