@@ -1,0 +1,12 @@
+{
+    "name": "tehp/tiny",
+    "description": "BC Tiny House Collective",
+    "type": "project",
+    "authors": [
+        {
+            "name": "mac craig",
+            "email": "maccraig98@gmail.com"
+        }
+    ],
+    "require": {}
+}

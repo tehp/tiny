@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;iDAEiD;AAEjD,uBAAuB;AAQvB,0BAA0B",
+"sources": ["../../scss/variables.scss"],
+"names": [],
+"file": "legal.css"
+}

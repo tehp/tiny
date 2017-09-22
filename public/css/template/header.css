@@ -1,0 +1,10 @@
+/**
+ * Global scss variables.
+/* ========== ========== ========== ========== */
+/** Primary Colours. */
+/** Typography Styling. */
+#navbar-profile-image, #side-bar-profile-image {
+  height: 30px;
+  width: 30px; }
+
+/*# sourceMappingURL=header.css.map */
