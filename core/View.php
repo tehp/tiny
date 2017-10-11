@@ -28,7 +28,7 @@ class View
    */
   public static function header_logged_out()
   {
-      require_once(getcwd() . "/views/Template/header-logged-out.php");
+      require_once(getcwd() . "/views/Template/sidebar-logged-out.php");
   }
 
   /**
@@ -38,7 +38,7 @@ class View
    */
   public static function header_logged_in()
   {
-      require_once(getcwd() . "/views/Template/header-logged-in.php");
+      require_once(getcwd() . "/views/Template/sidebar-logged-in.php");
   }
 
   /**

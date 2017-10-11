@@ -29,12 +29,21 @@ $user = new User();
     <!-- Header Section -->
     <?php View::header_logged_in(); ?>
 
-    <!-- Main Content -->
-    <?php View::component('Post/post-form.php'); ?>
+    <div id="content">
+                <div class="navbar-header">
+                    <button type="button" style="background-color: #ffd000" id="sidebarCollapse" class="btn navbar-btn">
+                        <i class="glyphicon glyphicon-align-left"></i>
+                        <span></span>
+                    </button>
+                </div>
 
+                <!-- Main Content -->
+                <?php View::component('Post/post-form.php'); ?>
 
-    <!-- Footer Section -->
-    <?php View::footer(); ?>
+              </div>
+    </div>
+</div>
+
 
   </body>
 

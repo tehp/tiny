@@ -41,13 +41,11 @@
 <script type="text/javascript" src="/public/js/libraries/jquery.min.js"></script>
 
 <!-- Bootstrap CSS/JS Imports -->
-<link rel="stylesheet" href="/public/css/bootstrap/bootstrap.min.css">
-<script defer type="text/javascript" src="/public/js/bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- Default Styling -->
 <link rel="stylesheet" href="/public/css/default.css">
-<link rel="stylesheet" href="/public/css/template/header.css">
-<link rel="stylesheet" href="/public/css/template/footer.css">
+<link rel="stylesheet" href="/public/css/template/sidebar.css">
 
 <!-- Script files -->
 <script src="../../public/js/default.js"></script>

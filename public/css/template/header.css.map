@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;iDAEiD;AAEjD,uBAAuB;AAQvB,0BAA0B;ACP1B,8CAA+C;EAC7C,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI",
-"sources": ["../../scss/variables.scss","../../scss/template/header.scss"],
-"names": [],
-"file": "header.css"
-}
