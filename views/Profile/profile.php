@@ -16,7 +16,7 @@ $not_found = 'User does not exist!';
 $profile = null;
 
 // Default Profile Image
-$default_image = 'https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg';
+$default_image = 'http://s3.amazonaws.com/cdn.roosterteeth.com/default/original/user_profile_female.jpg';
 
 // Checks if user exists, all numbers/letters, and is 13 characters long.
 if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) == 13) {
@@ -68,130 +68,137 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
     <!-- Header Section -->
     <?php View::header_logged_in(); ?>
 
-    <!-- Profile Top // Start -->
-    <section class="profile-top">
-      <div class="container profile-area">
+    <!-- Page Content Holder -->
+    <div id="content">
 
-        <!-- Display Users Information -->
-        <div class="row">
 
-          <!-- Profile Image -->
-          <?php
-          if ($profile->profile_image_url !== '') {
-              echo "
-            <div id='user-profile-image'>
-              <img src='{$profile->profile_image_url}' alt='Profile Image'>
-            </div>
-            ";
-          } else {
-              echo "
-            <div id='user-profile-image'>
-              <img src='{$default_image}' alt='Profile Image'>
-            </div>
-            ";
-          }
-          ?>
+      <!-- Profile Top // Start -->
+      <section class="profile-top">
+        <div class="container profile-area">
 
-          <!-- Users Full Name -->
-          <div id="user-full-name">
-            <?php echo $user->user_first . ' ' . $user->user_last; ?>
-          </div>
+          <!-- Display Users Information -->
+          <div class="row">
 
-          <!-- Users Location -->
-          <?php
-          if ($user->user_location !== '') {
-              echo "
-            <div id='user-location'>
-              <p>{$user->user_location}</p>
-            </div>
-            ";
-          }
-          ?>
-
-          <div class="form-divider" style="width: 35px; background-color: #ececec; border-radius: 16px;"></div>
-
-          <!-- Profile Description -->
-          <?php
-          if ($profile->profile_description !== '') {
-              echo "
-            <div id='profile-description'>
-              <p>{$profile->profile_description}</p>
-            </div>
-            ";
-          }
-          ?>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="users-posts">
-      <div class="container-fluid" id="users-posts-divider">
-        <!-- Middle Divider -->
-        <div class="row text-center" id="user-posts-divider">
-          <p id="users-posts-title">
-            <span class="ss-icon" style="position: relative; top: 3px; right: 1px;">compose</span>
-            Users Posts
-          </p>
-        </div>
-      </div>
-
-      <!-- All Of The Users Postings -->
-      <div class="container" id="users-posts-content">
-
-        <?php
-        $postings = DB::getInstance()->get('posts', array('user_id', '=', $user_current->data()->user_id));
-
-        if ($postings->count()) {
-            foreach ($postings->results() as $post) {
-
-              // $post->post_title;
-              // $post->post_description;
-              // Convert the date.
-              $post_date = strtotime($post->post_date);
-                $post_date = date('Y-m-d', $post_date);
-
-              // Get the ID for the posting.
-              $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
-
+            <!-- Profile Image -->
+            <?php
+            if ($profile->profile_image_url !== '') {
                 echo "
-              <!-- User Post -->
-              <div class='row' style='margin-bottom: 20px;'>
-                <div class='col-md-8 col-md-offset-2'>
-                  <div class='user-post-display'>
-                    <a href='{$post_listing_url}'>
-                      <h3 style='text-transform: capitalize;'>{$post->post_title}</h3>
-                      <div class='form-divider' style='margin: 10px 0 10px;'></div>
-                      <p id='post_description'>{$post->post_description}</p>
-                      <div class='form-divider' style='margin: 10px 0 10px;'></div>
-                      <p id='post-date'>Posted On {$post_date}</p>
-                    </a>
-                  </div>
-                </div>
+              <div id='user-profile-image'>
+                <img src='{$profile->profile_image_url}' alt='Profile Image'>
+              </div>
+              ";
+            } else {
+                echo "
+              <div id='user-profile-image'>
+                <img src='{$default_image}' alt='Profile Image'>
               </div>
               ";
             }
-        } else {
-            echo "
-          <!-- User Post -->
-          <div class='row'>
-            <div class='col-md-12 text-center'>
-              <div class='user-post-display' style='padding-bottom: 25px;'>
-                <h3>There are no postings by this user!</h3>
+            ?>
+
+            <!-- Users Full Name -->
+            <div id="user-full-name">
+              <?php echo ucfirst($user->user_first) . ' ' . ucfirst($user->user_last); ?>
+            </div>
+
+            <!-- Users Location -->
+            <?php
+            if ($user->user_location !== '') {
+                echo "
+              <div id='user-location'>
+                <p>{$user->user_location}</p>
+              </div>
+              ";
+            }
+            ?>
+
+            <div class="form-divider" style="width: 35px; background-color: #ececec; border-radius: 16px;"></div>
+
+            <!-- Profile Description -->
+            <?php
+            if ($profile->profile_description !== '') {
+                echo "
+              <div id='profile-description'>
+                <p>{$profile->profile_description}</p>
+              </div>
+              ";
+            }
+            ?>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="users-posts">
+        <div class="container-fluid" id="users-posts-divider">
+          <!-- Middle Divider -->
+          <div class="row text-center" id="user-posts-divider">
+            <p id="users-posts-title">
+              Users Posts
+            </p>
+          </div>
+        </div>
+
+        <!-- All Of The Users Postings -->
+        <div class="container" id="users-posts-content">
+
+          <?php
+          $postings = DB::getInstance()->get('posts', array('user_id', '=', $user_current->data()->user_id));
+
+          if ($postings->count()) {
+              foreach ($postings->results() as $post) {
+
+                // $post->post_title;
+                // $post->post_description;
+                // Convert the date.
+                $post_date = strtotime($post->post_date);
+                  $post_date = date('Y-m-d', $post_date);
+
+                // Get the ID for the posting.
+                $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
+
+                  echo "
+                <!-- User Post -->
+                <div class='row' style='margin-bottom: 20px;'>
+                  <div class='col-md-8 col-md-offset-2'>
+                    <div class='user-post-display'>
+                      <a href='{$post_listing_url}'>
+                        <h3 style='text-transform: capitalize;'>{$post->post_title}</h3>
+                        <div class='form-divider' style='margin: 10px 0 10px;'></div>
+                        <p id='post_description'>{$post->post_description}</p>
+                        <div class='form-divider' style='margin: 10px 0 10px;'></div>
+                        <p id='post-date'>Posted On {$post_date}</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                ";
+              }
+          } else {
+              echo "
+            <!-- User Post -->
+            <div class='row'>
+              <div class='col-md-12 text-center'>
+                <div class='user-post-display' style='padding-bottom: 25px;'>
+                  <h3>There are no postings by this user!</h3>
+                </div>
               </div>
             </div>
-          </div>
-          ";
-        }
-        ?>
+            ";
+          }
+          ?>
 
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- Footer Section -->
-    <?php View::footer(); ?>
+
+
+
+    </div>
+    </div> <!-- end content -->
+</div> <!-- end wrapper -->
 
   </body>
 </html>

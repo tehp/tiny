@@ -27,6 +27,15 @@ $user = new User();
   </head>
   <body>
 
+
+    <!-- Header Section -->
+    <?php View::header_logged_out(); ?>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+
+
       <!-- Register Area -->
       <section class="absolute-center">
         <div class="text-vertical-center">
@@ -133,6 +142,17 @@ $user = new User();
         </div>
       </div>
     </section>
+
+
+
+
+
+    </div>
+    </div> <!-- end content -->
+</div> <!-- end wrapper -->
+
+
+
 
   </body>
 </html>

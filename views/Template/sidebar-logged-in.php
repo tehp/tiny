@@ -34,7 +34,8 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                     <li><a href="/logout.php">Sign Out</a></li>
                     <li><a href="<?php echo escape($user_profile_url); ?>">View Profile</a></li>
 										<li><a href="/update.php">Update Info</a></li>
-										<li><a href="/changepassword.php">Change Password</a></li>
+                    <li><a href="/changepassword.php">Change Password</a></li>
+                    <li><a href="/profileimage.php">Profile Image</a></li>
                 </ul>
             </li>
             <li>

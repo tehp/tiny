@@ -111,7 +111,7 @@ if ($user_description->count()) {
                                 echo "
                                 <div class='row'>
                                   <div class='col-sm-4 col-sm-offset-4'>
-                                    <img style='height: 75px; width: 75px; display: block; margin: auto; border-radius: 100px; margin-bottom: 25px; object-fit: cover;' src='https://static1.squarespace.com/static/56ba4348b09f95db7f71a726/t/58d7f267ff7c50b172895560/1490547315597/justin.jpg'>
+                                    <img style='height: 75px; width: 75px; display: block; margin: auto; border-radius: 100px; margin-bottom: 25px; object-fit: cover;' src='http://s3.amazonaws.com/cdn.roosterteeth.com/default/original/user_profile_female.jpg'>
                                   </div>
                                 </div>
                                 ";

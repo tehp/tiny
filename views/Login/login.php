@@ -14,6 +14,7 @@ $user = new User();
     <title>BCTHC | Log in</title>
 
     <meta name="description" content="">
+
     <!-- Boiler Plate Tags. -->
     <?php View::head(); ?>
 
@@ -23,88 +24,104 @@ $user = new User();
   </head>
   <body>
 
-    <!-- Header -->
-    <section class="absolute-center">
-        <div class="text-vertical-center">
-          <div class="col-lg-4 col-lg-offset-4">
+    <!-- Header Section -->
+    <?php View::header_logged_out(); ?>
 
-            <!-- Sign In Form -->
-            <div class="absolute-center-form">
-            <form method="post">
+    <!-- Page Content Holder -->
+    <div id="content">
 
-              <div class="divider"></div>
 
-              <!-- User Email -->
-              <div class="input-group input-group-sm margin-bottom-15">
-                <input required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
-              </div>
+      <!-- Header -->
+      <section class="absolute-center">
+          <div class="text-vertical-center">
+            <div class="col-lg-4 col-lg-offset-4">
 
-              <!-- User Password -->
-              <div class="input-group input-group-sm margin-bottom-20">
-                <input required="true" type="password" name="user_password" placeholder="Password" id="user_password">
-                <a class="input-group-addon addon-right" href="index.php" id="password-addon-2">
-                  <span id="password-divider">|</span>
-                  <span id="password-forgot">Forgot?</span>
-                </a>
-              </div>
+              <!-- Sign In Form -->
+              <div class="absolute-center-form">
+              <form method="post">
 
-              <div class="divider"></div>
+                <div class="divider"></div>
 
-              <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-              <input type="submit" class="btn btn-submit" value="Sign In">
-              <div class="divider" style="margin-top: 15px; margin-bottom: 15px;"></div>
-            </form>
+                <!-- User Email -->
+                <div class="input-group input-group-sm margin-bottom-15">
+                  <input required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
+                </div>
 
-            <p class="dont-have-account-link text-center">
-              Don't have an account?
-              <a target="_blank" href="/register.php">Sign Up</a>
-            </p>
+                <!-- User Password -->
+                <div class="input-group input-group-sm margin-bottom-20">
+                  <input required="true" type="password" name="user_password" placeholder="Password" id="user_password">
+                  <a class="input-group-addon addon-right" href="index.php" id="password-addon-2">
+                    <span id="password-divider">|</span>
+                    <span id="password-forgot">Forgot?</span>
+                  </a>
+                </div>
+
+                <div class="divider"></div>
+
+                <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+                <input type="submit" class="btn btn-submit" value="Sign In">
+                <div class="divider" style="margin-top: 15px; margin-bottom: 15px;"></div>
+              </form>
+
+              <p class="dont-have-account-link text-center">
+                Don't have an account?
+                <a target="_blank" href="/register.php">Sign Up</a>
+              </p>
+
+            </div>
+
+      <!-- Form Error Display -->
+      <?php
+
+        if (Session::exists('form_errors')) {
+            $form_errors = Session::flash('form_errors');
+
+            foreach ($form_errors as $error) {
+                $error = explode('/', $error);
+                $error_form = $error[0];
+                $error_message = $error[1];
+
+                echo "
+            <script type='text/javascript'>
+              var error_form = '$error_form';
+              var error_message = '{$error_message}';
+
+              // Add/check for error on email input.
+              if(error_form === 'user_email') {
+                $('#user_email').css('border-color', '#ff9b9b');
+                $('#user_email').attr('placeholder', error_message);
+                $('#user_email').addClass('error-placeholder');
+                $('#login-addon').css('border-color', '#ff9b9b');
+                $('#login-addon').css('color', '#ff9b9b');
+              }
+
+              // Add/check for error on password input.
+              if(error_form === 'user_password') {
+                $('#user_password').css('border-color', '#ff9b9b');
+                $('#user_password').attr('placeholder', error_message);
+                $('#user_password').addClass('error-placeholder');
+                $('#password-addon-1').css('border-color', '#ff9b9b');
+                $('#password-addon-1').css('color', '#ff9b9b');
+              }
+            </script>
+            ";
+            }
+        }
+
+      ?>
 
           </div>
-
-    <!-- Form Error Display -->
-    <?php
-
-      if (Session::exists('form_errors')) {
-          $form_errors = Session::flash('form_errors');
-
-          foreach ($form_errors as $error) {
-              $error = explode('/', $error);
-              $error_form = $error[0];
-              $error_message = $error[1];
-
-              echo "
-          <script type='text/javascript'>
-            var error_form = '$error_form';
-            var error_message = '{$error_message}';
-
-            // Add/check for error on email input.
-            if(error_form === 'user_email') {
-              $('#user_email').css('border-color', '#ff9b9b');
-              $('#user_email').attr('placeholder', error_message);
-              $('#user_email').addClass('error-placeholder');
-              $('#login-addon').css('border-color', '#ff9b9b');
-              $('#login-addon').css('color', '#ff9b9b');
-            }
-
-            // Add/check for error on password input.
-            if(error_form === 'user_password') {
-              $('#user_password').css('border-color', '#ff9b9b');
-              $('#user_password').attr('placeholder', error_message);
-              $('#user_password').addClass('error-placeholder');
-              $('#password-addon-1').css('border-color', '#ff9b9b');
-              $('#password-addon-1').css('color', '#ff9b9b');
-            }
-          </script>
-          ";
-          }
-      }
-
-    ?>
-
         </div>
-      </div>
-    </section>
+      </section>
+
+
+
+
+    </div>
+    </div> <!-- end content -->
+</div> <!-- end wrapper -->
+
+
 
   </body>
 </html>
