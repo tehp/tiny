@@ -30,6 +30,13 @@ $user = new User();
     <!-- Page Content Holder -->
     <div id="content">
 
+      <div class="navbar-header">
+          <button type="button" style="backgr
+          ound-color: #ffd000" id="sidebarCollapse" class="btn navbar-btn">
+              <i class="glyphicon glyphicon-align-left"></i>
+              <span></span>
+          </button>
+      </div>
 
       <!-- Header -->
       <section class="absolute-center">

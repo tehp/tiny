@@ -49,10 +49,7 @@ if ($user_description->count()) {
                     <!-- Update Form Header -->
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3" id="update-form-header">
-                        <h3 class="center" id="update-page-title">
-                          <span class="ss-icon" style="position: relative; top: 3px; right: 1px;">user</span>
-                          Edit Your Profile
-                        </h3>
+                        <h3 class="center" id="update-page-title">Edit Your Profile</h3>
                       </div>
                     </div>
 

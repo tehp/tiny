@@ -82,7 +82,7 @@ if (Session::exists('image_error')) {
             <div class="form-group">
               <label for="post_image">Post Image <span class="require">*</span></label>
               <label class="btn btn-default btn-file">
-                  <span class="ss-icon" style="position: relative; top: 2px; right: 2px;">upload</span> Upload Image
+                  Upload Image
                   <input class="form-control post_input" type="file" name="post_image" id="post_image" required="true" accept="image/jpeg,image/x-png,image/png,/image/jpg"/>
               </label>
             </div>
@@ -96,11 +96,23 @@ if (Session::exists('image_error')) {
               <div class="btn-group col-md-12" data-toggle="buttons">
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="asdf">asdf
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="housing">Housing
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="wasd">wasd
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="land">Land
+                  </label>
+
+                  <label class="btn btn-default post-tags">
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="buildingsupplies">Building Supplies
+                  </label>
+
+                  <label class="btn btn-default post-tags">
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="services">Services
+                  </label>
+
+                  <label class="btn btn-default post-tags">
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="consulting">Consulting
                   </label>
 
 

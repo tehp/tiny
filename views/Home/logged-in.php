@@ -144,7 +144,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                                         <div class='form-divider' style='margin: 5px 0 9px;'></div>
                                         <small class='stats-text'>
                                             <b>Posted: </b> {$post_date}
-                                            <img class='hidden-xs' id='user-post-profile-image' src='{$profile_image}' />
+                                            <img class='hidden-xs' id='user-post-profile-image' style='width: 50px; height: 50px;' src='{$profile_image}' />
                                         </small>
                                         <tags style='display: none;'>{$post->post_tag}</tags>
                                       </div>

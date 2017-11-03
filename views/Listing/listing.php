@@ -107,8 +107,6 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <meta itemprop="description" content="<?php echo $post->post_description ?>">
     <meta itemprop="image" content="">
 
-
-
     <!-- Styling Sheets. -->
     <link rel="stylesheet" href="/public/css/listing/listing.css">
 
@@ -118,105 +116,113 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     <!-- Header Section -->
     <?php View::header_logged_in(); ?>
 
-    <!-- Listing Image Section -->
-    <section id="listing-image-header">
-
-      <!-- The postings image -->
-      <div class="hidden-lg hidden-md" id="listing-image">
-        <img src="<?php echo $image->post_image_url ?>">
-      </div>
-      <div class="hidden-sm hidden-xs" id="listing-image-big">
-        <img src="<?php echo $image->post_image_url ?>">
-      </div>
-
-    </section>
-
-    <!-- Main Posting Content -->
-    <section class="main">
-      <div class="container" id="area">
-
-        <!-- Posting Information -->
-        <div class="col-md-10 col-md-offset-1">
-
-          <?php
-
-            if($profile_image->profile_image_url) {
-              $profile_image = $profile_image->profile_image_url;
-            } else {
-              $profile_image = 'http://s3.amazonaws.com/cdn.roosterteeth.com/default/original/user_profile_female.jpg';
-            }
-
-
-              echo "
-              <!-- Post Listing -->
-              <div class='col-md-8 col-md-offset-2' id='post-information'>
-
-                <div id='listing-title'>
-                  <h3>{$post->post_title}</h3>
+    <div id="content">
+                <div class="navbar-header">
+                    <button type="button" style="background-color: #ffd000" id="sidebarCollapse" class="btn navbar-btn">
+                        <i class="glyphicon glyphicon-align-left"></i>
+                        <span></span>
+                    </button>
                 </div>
 
-                <div class='form-divider'></div>
 
-                <div id='listing-poster-info'>
-                  <img src='{$profile_image}' id='profile-img' alt='Profile Image'/>
-                  <p id='posted-by'>
-                  Posted By
-                  <a href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a><br>
-                  <small>Lives In {$poster->user_location}</small>
-                  </p>
-                </div>
+                <!-- Listing Image Section -->
+                <section id="listing-image-header">
 
-                <div class='form-divider'></div>
+                  <!-- The postings image -->
+                  <div class="hidden-lg hidden-md" id="listing-image">
+                    <img src="<?php echo $image->post_image_url ?>">
+                  </div>
+                  <div class="hidden-sm hidden-xs" id="listing-image-big">
+                    <img src="<?php echo $image->post_image_url ?>">
+                  </div>
 
-                <p>{$post->post_description}</p>
-                <hr>
+                </section>
 
-                <a href='{$user_chat_url}'>Message User About Posting</a>
-                <br>
-                <small>
-                  <b>Pickup Location:</b>
-                  {$post->post_pickup_location}
-                </small>
-                <br>
+                <!-- Main Posting Content -->
+                <section class="main">
+                  <div class="container" id="area">
 
-                <small>
-                  <b>Tags:</b>
-                  {$post->post_tag}
-                </small>
-                <br>
+                    <!-- Posting Information -->
+                    <div class="col-md-10 col-md-offset-1">
 
-                <small>
-                  <b>Post Date:</b>
-                  {$post->post_date}
-                </small>
-                <br><br>
-                <div class='share-buttons'>
-                  <h6 style='padding-bottom: 10px;'>Share on: </h6>
-                  <ul>
-                    <li>
-                      <a href='https://twitter.com/intent/tweet?text={$post_listing_url}' class='twitter btn' title='Share on Twitter'><i class='fa fa-twitter'></i><span> Twitter</span></a>
-                    </li>
-                    <li>
-                      <a href='https://www.facebook.com/sharer/sharer.php?u={$post_listing_url}' class='facebook btn' title='Share on Facebook'><i class='fa fa-facebook'></i><span> Facebook</span></a>
-                    </li>
-                    <li>
-                      <a href='https://plus.google.com/share?url={$post_listing_url}' class='google-plus btn' title='Share on Google Plus'><i class='fa fa-google-plus'></i><span> Google+</span></a>
-                    </li>
-                  </ul>
-                </div>
-                <br><br><br><br><br>
+                      <?php
 
-              </div>
-              ";
+                        if($profile_image->profile_image_url) {
+                          $profile_image = $profile_image->profile_image_url;
+                        } else {
+                          $profile_image = 'http://s3.amazonaws.com/cdn.roosterteeth.com/default/original/user_profile_female.jpg';
+                        }
 
-          ?>
+
+                          echo "
+                          <!-- Post Listing -->
+                          <div class='col-md-8 col-md-offset-2' id='post-information'>
+
+                            <div id='listing-title'>
+                              <h3>{$post->post_title}</h3>
+                            </div>
+
+                            <div class='form-divider'></div>
+
+                            <div id='listing-poster-info'>
+                              <img style='width: 100px; height: 100px;' src='{$profile_image}' id='profile-img' alt='Profile Image'/>
+                              <p id='posted-by'>
+                              Posted By
+                              <a href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a><br>
+                              <small>Lives In {$poster->user_location}</small>
+                              </p>
+                            </div>
+
+                            <div class='form-divider'></div>
+
+                            <p>{$post->post_description}</p>
+                            <hr>
+
+                            <small>
+                              <b>Pickup Location:</b>
+                              {$post->post_pickup_location}
+                            </small>
+                            <br>
+
+                            <small>
+                              <b>Tags:</b>
+                              {$post->post_tag}
+                            </small>
+                            <br>
+
+                            <small>
+                              <b>Post Date:</b>
+                              {$post->post_date}
+                            </small>
+                            <br><br>
+                            <div class='share-buttons'>
+                              <h6 style='padding-bottom: 10px;'>Share on: </h6>
+                              <ul>
+                                <li>
+                                  <a href='https://twitter.com/intent/tweet?text={$post_listing_url}' class='twitter btn' title='Share on Twitter'><i class='fa fa-twitter'></i><span> Twitter</span></a>
+                                </li>
+                                <li>
+                                  <a href='https://www.facebook.com/sharer/sharer.php?u={$post_listing_url}' class='facebook btn' title='Share on Facebook'><i class='fa fa-facebook'></i><span> Facebook</span></a>
+                                </li>
+                                <li>
+                                  <a href='https://plus.google.com/share?url={$post_listing_url}' class='google-plus btn' title='Share on Google Plus'><i class='fa fa-google-plus'></i><span> Google+</span></a>
+                                </li>
+                              </ul>
+                            </div>
+                            <br><br><br><br><br>
+
+                          </div>
+                          ";
+
+                      ?>
+                    </div>
+
+                  </div>
+                </section>
+
         </div>
-
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <?php View::footer(); ?>
+    </div>
+</div>
 
   </body>
 </html>
