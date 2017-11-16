@@ -25,11 +25,9 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     <link rel="stylesheet" href="/public/css/home-in/home-in.css">
 
     <!-- Script Files -->
-    <script src="/public/js/masonry.js" type="text/javascript"></script>
+    <script src="/public/js/isotope.js" type="text/javascript"></script>
+    <script src="/public/js/homepage.js" type="text/javascript"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="/public/js/loading.js" type="text/javascript"></script>
-    <script src="/public/js/search.js" type="text/javascript"></script>
-    <script src="/public/js/filter.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -54,26 +52,19 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                 </div>
 
                 <!-- Main Content -->
-                <section class="main">
 
                   <div class="container">
                     <!-- Search Bar -->
-                    <div class="row" id="search-bar-area">
                       <div class="col-md-10 col-md-offset-1">
                         <input type="text" class="main-search" placeholder="Search..." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
-                        <span class="ss-icon search-icon">search</span>
                       </div>
-                    </div>
 
                   </div>
-                </section>
 
                 <!-- Display Listings -->
-                <section class="listings">
                   <div class="container-fluid">
 
                     <!-- Recent Posts. -->
-                    <div class="row" id="listing-rows">
 
                       <?php /** Check whether the user had a successful post. */
                       if (Session::exists('successful_post')) { // Start
@@ -92,7 +83,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                       <!-- Display Grid For Posts. -->
                       <div class="col-md-10 col-md-offset-1 grid">
 
-                        <div class="grid-sizer"></div>
+
 
                             <?php
                             $postings = DB::getInstance()->query("SELECT * FROM posts ORDER BY post_date DESC");
@@ -129,17 +120,19 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                                 // Get the ID for the posting.
                                 $post_listing_url = '/listing.php?post=' . substr($post->post_id, 5);
 
+
+                                // NOTE: USE {$image->post_image_url} instead of temp url to image
                                     echo "
                                   <div class='thumbnail grid-item'>
                                     <a href='{$post_listing_url}'>
-                                      <img src='{$image->post_image_url}' class='img-responsive' alt='Post Image'>
+                                      <img src='https://previews.123rf.com/images/andreblais/andreblais0806/andreblais080600015/3172713-Upset-businessman-giving-middle-finger-to-boss-DOF-focus-on-hand-Stock-Photo.jpg' alt='Post Image'>
                                       <div class='caption'>
                                         <p class='title'>
                                         {$post->post_title}
                                         </p>
                                         <p class='description'>
                                           {$description}
-                                          <a href='{$post_listing_url}' style='color: #50ba4a !important; font-family: proximanova-regular; letter-spacing: 0.5px;'>read more</a>
+                                          <a href='{$post_listing_url}' style='color: #68C5F8 !important; font-family: proximanova-regular; letter-spacing: 0.5px;'>read more</a>
                                         </p>
                                         <div class='form-divider' style='margin: 5px 0 9px;'></div>
                                         <small class='stats-text'>
@@ -157,10 +150,8 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                             }
                             ?>
 
-                        </div>
                     </div>
                   </div>
-                </section>
                 </body>
                 </html>
 

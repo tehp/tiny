@@ -35,7 +35,6 @@ $(document).ready(function() {
                 $(this).removeClass("item masonry-brick grid-item");
             }
         });
-
         $grid.masonry('layout');
     });
 });;;

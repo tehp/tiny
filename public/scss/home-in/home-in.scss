@@ -2,3 +2,17 @@
 //
 // Blank sass file to be created soon!
 //
+
+
+.grid-item {
+  width: 390px;
+  height: 450px;
+  margin-left: 15px;
+  margin-right: 15px;
+  float: left;
+  background: #FFFFFF;
+  border: 3px solid #1F1913;
+ }
+
+ // likely will never be used. maybe for featured?
+.grid-item--width2 { width: 60%; }
