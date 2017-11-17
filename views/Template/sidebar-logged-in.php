@@ -18,7 +18,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     <nav id="sidebar">
         <div class="sidebar-header">
           <br>
-					<h3><a href="/">BC Tiny House Collective</a></h3>
+					<h3><a href="/">Tiny House Marketplace</a></h3>
             <br>
         </div>
 

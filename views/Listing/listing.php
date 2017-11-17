@@ -7,6 +7,9 @@
 /** User to check logged in and get user data. */
 $user = new User();
 
+$cur_user_id = $user->data()->user_id;
+$cur_user_role = $user->data()->user_type;
+
 /* The posters information. */
 $poster = null;
 
@@ -208,13 +211,22 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                                   <a href='https://plus.google.com/share?url={$post_listing_url}' class='google-plus btn' title='Share on Google Plus'><i class='fa fa-google-plus'></i><span> Google+</span></a>
                                 </li>
                               </ul>
-                            </div>
-                            <br><br><br><br><br>
+
 
                           </div>
                           ";
 
+                          if ($cur_user_role == "mod") {
+                            echo "<br>";
+                            echo "<hr>ADMIN AREA:<br>";
+                            echo "<button id='delete' style='background-color: white; color: black; border: 3px solid #FF0000; border-radius: 12px;'>DELETE</button>";
+                          }
+
+                          echo "<hr></div>
+                          <br><br><br><br><br>";
                       ?>
+
+
                     </div>
 
                   </div>

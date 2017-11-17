@@ -125,7 +125,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                                     echo "
                                   <div class='thumbnail grid-item'>
                                     <a href='{$post_listing_url}'>
-                                      <img src='https://previews.123rf.com/images/andreblais/andreblais0806/andreblais080600015/3172713-Upset-businessman-giving-middle-finger-to-boss-DOF-focus-on-hand-Stock-Photo.jpg' alt='Post Image'>
+                                      <img src='http://www.vincenzo.net/isxkb/images/a/a9/Example.jpg' alt='Post Image'>
                                       <div class='caption'>
                                         <p class='title'>
                                         {$post->post_title}
