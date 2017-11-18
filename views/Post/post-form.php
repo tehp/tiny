@@ -104,7 +104,7 @@ if (Session::exists('image_error')) {
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="buildingsupplies">Building Supplies
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="supplies">Building Supplies
                   </label>
 
                   <label class="btn btn-default post-tags">

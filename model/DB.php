@@ -251,7 +251,7 @@ class DB {
    * @return array - The first row returned from a query.
    */
   public function first() {
-    return $this->results()[0];
+      return $this->results()[0];
   }
 }
 

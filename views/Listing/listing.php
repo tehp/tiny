@@ -34,18 +34,18 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
   // Add post_ prefix to ID.
   $post_id = 'post_' . $_GET["post"];
 
-  // SELECT * FROM posts WHERE post_id = 'post_590914d2a7062';
+  // SELECT * FROM posts WHERE post_id = 'id here';
   $posting = DB::getInstance()->get('posts', array('post_id', '=', $post_id));
 
   // If the post exists.
   if ($posting->count()) {
-      $post = $posting->first();
+    $post = $posting->first();
 
     // Get the image for the post.
     $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
 
-    // Save into a variable.
-    $image = $post_image->first();
+    // Save into a variable. TODO: un comment
+    //$image = $post_image->first();
 
     // Get the profile image for the user.
     $user_profile = DB::getInstance()->get('users_profile', array('user_id', '=', $post->user_id));
@@ -218,14 +218,26 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
                           if ($cur_user_role == "mod") {
                             echo "<br>";
-                            echo "<hr>ADMIN AREA:<br>";
-                            echo "<button id='delete' style='background-color: white; color: black; border: 3px solid #FF0000; border-radius: 12px;'>DELETE</button>";
+                            echo "<hr>Administration Tools:<br>";
+                            echo "<form method='post'>
+                                <input type='submit' name='delete_post' id='delete_post' value='DELETE POST' /><br/>
+                            </form>";
                           }
 
-                          echo "<hr></div>
-                          <br><br><br><br><br>";
                       ?>
 
+
+
+                      <?php
+                      if(array_key_exists('delete_post',$_POST)){
+                        DB::getInstance()->delete('posts', array('post_id', '=', $post_id));
+                        DB::getInstance()->delete('post_image', array('post_id', '=', $post_id));
+                         echo "Post has been deleted. You can leave this page when you wish.";
+                      }
+
+                      ?>
+                      <hr></div>
+                      <br><br><br><br><br>
 
                     </div>
 

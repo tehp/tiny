@@ -94,7 +94,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
 
             // Add a comma to the end of the string.
             if ($count < count($_POST["post_tag"])) {
-              $tags .= ', ';
+              $tags .= ' ';
             }
             $count++;
           }

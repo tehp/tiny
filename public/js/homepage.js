@@ -20,3 +20,8 @@ $( document ).ready(function() {
     $grid.isotope('layout');
   });
 });
+
+function redo_layout() {
+  await sleep(2000);
+  $grid.isotope('layout');
+}

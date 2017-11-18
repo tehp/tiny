@@ -1,14 +1,4 @@
 $(document).ready(function() {
-    var $grid = $('.grid').imagesLoaded(function() {
-        $(".grid").show();
-        $grid.masonry({
-            itemSelector: '.grid-item',
-            transitionDuration: '0.1',
-            columnWidth: '.grid-sizer',
-            percentPosition: true
-        });
-        $(".spinner").hide();
-    });
 
     var lastentry = "";
 
@@ -35,6 +25,8 @@ $(document).ready(function() {
                 $(this).removeClass("item masonry-brick grid-item");
             }
         });
-        $grid.masonry('layout');
+        //redo_layout();
+        //$grid.isotope('layout');
+        // moved to redo_layout() function
     });
 });;;

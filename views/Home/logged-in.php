@@ -27,6 +27,8 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     <!-- Script Files -->
     <script src="/public/js/isotope.js" type="text/javascript"></script>
     <script src="/public/js/homepage.js" type="text/javascript"></script>
+    <script src="/public/js/search.js" type="text/javascript"></script>
+    <script src="/public/js/filter.js" type="text/javascript"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
   </head>
@@ -61,6 +63,19 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 
                   </div>
 
+                  <div class="col-md-10 col-md-offset-1" style="margin-top: 0px; margin-bottom: 35px; background-color: #ebeff3; color: #898c90; border-top-right-radius: 2px; border-top-left-radius: 2px; border-top: 4px solid #d6dee4;" class="row" id="filters">
+                      <div class="radio">
+                        <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Housing</label>
+                        <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Land</label>
+                        <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Building Supplies</label>
+                        <label class="radio-inline"><input id="rad4" type="radio" name="optradio">Services</label>
+                        <span class="hidden-xs">
+                        <label class="radio-inline"><input id="rad5" type="radio" name="optradio">Consulting</label>
+                      </span>
+                    </div>
+                  </div>
+
+
                 <!-- Display Listings -->
                   <div class="container-fluid">
 
@@ -82,6 +97,8 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 
                       <!-- Display Grid For Posts. -->
                       <div class="col-md-10 col-md-offset-1 grid">
+
+
 
 
 
