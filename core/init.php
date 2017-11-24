@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 $GLOBALS['config'] = array(
   'mysql' => array(
     'host' => 'localhost',
-    'username' => 'root',
+    'username' => 'tinyUser',
     'password' => getenv('PW'),
     'db' => 'tiny'
   ),
