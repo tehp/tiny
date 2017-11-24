@@ -195,6 +195,25 @@ class DB {
   }
 
   /**
+   * Toggle if a post is featured.
+   * @param  String $table   - The table where the value will be updated.
+   * @param  int    $post_id - The id of the post to be changed.
+   * @return boolean         - True if update was successful, false if not.
+   */
+  public function featured_toggle($table, $post_id, $fields) {
+    // Build the SQL query to be executed.
+    $sql = "UPDATE {$table} SET featured = '1' WHERE post_id = {$post_id}";
+
+    // If the query was successful, return true.
+    if (!$this->query($sql, $fields)->error()) {
+      return true;
+    }
+
+    return false;
+
+  }
+
+  /**
    * Returns the result of the previous query.
    * @return array - The previous queries results.
    */

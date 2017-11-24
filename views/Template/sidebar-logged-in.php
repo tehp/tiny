@@ -40,10 +40,9 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
             </li>
             <li>
                 <a href="#">About</a>
-
             </li>
             <li>
-                <a href="#">Featured</a>
+                <a href="/featured.php">Featured</a>
             </li>
             <li>
                 <a href="#">Categories</a>

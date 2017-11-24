@@ -220,7 +220,10 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                             echo "<br>";
                             echo "<hr>Administration Tools:<br>";
                             echo "<form method='post'>
-                                <input type='submit' name='delete_post' id='delete_post' value='DELETE POST' /><br/>
+                            <input type='submit' name='feature_post' id='feature_post' value='FEATURE POST' /><br/>
+                            <br>
+                            <input type='submit' name='delete_post' id='delete_post' value='DELETE POST' /><br/>
+
                             </form>";
                           }
 
@@ -229,11 +232,22 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
 
                       <?php
-                      if(array_key_exists('delete_post',$_POST)){
+                      if(array_key_exists('delete_post', $_POST)){
                         DB::getInstance()->delete('posts', array('post_id', '=', $post_id));
                         DB::getInstance()->delete('post_image', array('post_id', '=', $post_id));
                          echo "Post has been deleted. You can leave this page when you wish.";
                       }
+
+                      ?>
+                      <?php
+                      if(array_key_exists('feature_post', $_POST)){
+                        if(DB::getInstance()->featured_toggle('posts', $post_id, $fields = array())) {
+                         echo "Post has been featured. You can leave this page when you wish.";
+                       }
+                      }
+
+                        $query = "UPDATE posts SET featured = '1' WHERE post_id = {$post_id}";
+                        $result = query($query);
 
                       ?>
                       <hr></div>
