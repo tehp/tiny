@@ -20,9 +20,9 @@ class Hash {
    * Generates a salt value with a length of 32.
    * @return string - The value of the generated salt.
    */
-  public static function salt() {
-      return mcrypt_create_iv(32, MCRYPT_DEV_URANDOM);
-  }
+   public static function salt() {
+       return utf8_encode(openssl_random_pseudo_bytes(32));
+   }
 
   /**
    * Generates a unique random hash with no salt.
