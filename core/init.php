@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 /** 3.) Global information about shared data */
 $GLOBALS['config'] = array(
   'mysql' => array(
-    'host' => '159.203.26.64',
+    'host' => 'localhost',
     'username' => 'root',
     'password' => getenv('PW'),
     'db' => 'tiny'
