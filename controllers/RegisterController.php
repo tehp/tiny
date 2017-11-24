@@ -65,12 +65,12 @@ if (Input::exists() && Token::check(Input::get('token'))) {
       ));
 
       // Log the user in.
-      //$user->login(Input::get('user_email'), Input::get('user_password'));
+      $user->login(Input::get('user_email'), Input::get('user_password'));
 
       // Create row inside the users_profile details.
-      //DB::getInstance()->insert('users_profile', array(
-      //  'user_id' => $user_id
-      //));
+      DB::getInstance()->insert('users_profile', array(
+        'user_id' => $user_id
+      ));
 
             Redirect::to('index.php');
         } catch (Exception $e) {
