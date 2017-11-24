@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/tehp/tiny#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
     "phplint": "^1.7.4"
   }
 }
