@@ -51,7 +51,7 @@ if (Input::exists() && Token::check(Input::get('token'))) {
     // Create a unique post ID.
     $user_id = uniqid('user_');
 
-    var_dump(Hash::make(‘mac’, $hash));
+    var_dump(Hash::make('mac', $salt));
     exit(0);
 
       try {
