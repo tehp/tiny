@@ -21,7 +21,7 @@ class Hash {
    * @return string - The value of the generated salt.
    */
   public static function salt() {
-      return utf8_encode(openssl_random_pseudo_bytes(32));
+      return mcrypt_create_iv(32, MCRYPT_DEV_URANDOM);
   }
 
   /**
