@@ -51,6 +51,9 @@ if (Input::exists() && Token::check(Input::get('token'))) {
     // Create a unique post ID.
     $user_id = uniqid('user_');
 
+    var_dump(Hash::make(‘mac’, $hash));
+    exit(0);
+
       try {
 
       // Try creating a new user.
