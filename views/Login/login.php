@@ -51,15 +51,12 @@ $user = new User();
 
                 <!-- User Email -->
                 <div class="input-group input-group-sm margin-bottom-15">
-                  <input required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
+                  <input style="margin-bottom: 10px;" required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
                 </div>
 
                 <!-- User Password -->
                 <div class="input-group input-group-sm margin-bottom-20">
-                  <input required="true" type="password" name="user_password" placeholder="Password" id="user_password">
-                  <a class="input-group-addon addon-right" href="index.php" id="password-addon-2">
-                    <span id="password-divider">|</span>
-                    <span id="password-forgot">Forgot?</span>
+                  <input style="margin-bottom: 10px;" required="true" type="password" name="user_password" placeholder="Password" id="user_password">
                   </a>
                 </div>
 

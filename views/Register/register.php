@@ -53,14 +53,14 @@ $user = new User();
                   <!-- First Name -->
                   <div class="col-xs-6" style="padding-right: 6px;">
                     <div class="field">
-                      <input required="true" type="text" name="user_first" class="form-control" placeholder="First Name" value="<?php echo escape(Input::get('user_first')); ?>" id="user_first">
+                      <input style="margin-bottom: 10px;" required="true" type="text" name="user_first" class="form-control" placeholder="First Name" value="<?php echo escape(Input::get('user_first')); ?>" id="user_first">
                     </div>
                   </div>
 
                   <!-- Last Name -->
                   <div class="col-xs-6" style="padding-left: 6px;">
                     <div class="field">
-                      <input required="true" type="text" name="user_last" class="form-control" placeholder="Last Name" value="<?php echo escape(Input::get('user_last')); ?>" id="user_last">
+                      <input style="margin-bottom: 10px;" required="true" type="text" name="user_last" class="form-control" placeholder="Last Name" value="<?php echo escape(Input::get('user_last')); ?>" id="user_last">
                     </div>
                   </div>
 
@@ -68,17 +68,17 @@ $user = new User();
 
                 <!-- Email -->
                 <div class="field margin-bottom-15">
-                  <input required="true" type="email" name="user_email" class="form-control" placeholder="Email" id="user_email" value="<?php echo escape(Input::get('user_email')); ?>" autocomplete="off">
+                  <input style="margin-bottom: 10px;" required="true" type="email" name="user_email" class="form-control" placeholder="Email" id="user_email" value="<?php echo escape(Input::get('user_email')); ?>" autocomplete="off">
                 </div>
 
                 <!-- Password  -->
                 <div class="field margin-bottom-15">
-                  <input required="true" type="password" name="user_password" class="form-control" placeholder="Password" id="user_password">
+                  <input style="margin-bottom: 10px;" required="true" type="password" name="user_password" class="form-control" placeholder="Password" id="user_password">
                 </div>
 
                 <!-- Password Again -->
                 <div class="field margin-bottom-15">
-                  <input required="true" type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
+                  <input style="margin-bottom: 10px;" required="true" type="password" name="password_again" class="form-control" placeholder="Repeat Password" id="password_again">
                 </div>
 
                 <!-- Submit Button -->

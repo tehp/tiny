@@ -57,7 +57,7 @@ if (Session::exists('image_error')) {
             <!-- Title -->
             <div class="form-group">
               <label for="post_title">Title <span class="require">*</span></label>
-              <input required="true" tabindex="0" type="text" class="form-control post_input" name="post_title" id="post_title" autocomplete="off" placeholder="Ramen, pasta, chicken, etc.." />
+              <input required="true" tabindex="0" type="text" class="form-control post_input" name="post_title" id="post_title" autocomplete="off" placeholder="Wood, a house, your skills..." />
               <small id="title-count" class="form-count-display"><span id="title-counter">0</span>/50</small>
             </div>
             <hr>
@@ -65,7 +65,7 @@ if (Session::exists('image_error')) {
             <!-- Pickup Location -->
             <div class="form-group">
               <label for="post_pickup_location">Location <span class="require">*</span></label>
-              <input required="true" tabindex="0" type="text" class="form-control post_input" name="post_pickup_location" id="post_pickup_location" placeholder="666 Pine St." />
+              <input required="true" tabindex="0" type="text" class="form-control post_input" name="post_pickup_location" id="post_pickup_location" placeholder="4908 North Broadway St." />
               <small id="pickup-count" class="form-count-display"><span id="pickup-counter">0</span>/80</small>
             </div>
             <hr>
@@ -73,7 +73,7 @@ if (Session::exists('image_error')) {
             <!-- Description -->
             <div class="form-group">
               <label for="post_description">Description <span class="require">*</span></label>
-              <textarea required="true" tabindex="0" rows="5" class="form-control post_input" name="post_description" id="post_description" placeholder="Describe your post in more detail."></textarea>
+              <textarea required="true" tabindex="0" rows="5" class="form-control post_input" name="post_description" id="post_description" placeholder="Describe your post in as much detail as you can!"></textarea>
               <small id="description-count" class="form-count-display"><span id="description-counter">0</span>/500</small>
             </div>
             <hr>
