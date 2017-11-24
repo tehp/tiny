@@ -13,7 +13,8 @@ class Hash {
    * @return string         - The hash value that was made.
    */
   public static function make($string, $salt = '') {
-      return hash('sha256', $string . $salt);
+      // return hash('sha256', $string . $salt);
+      return password_hash($string, PASSWORD_DEFAULT);
   }
 
   /**
