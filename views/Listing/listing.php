@@ -44,8 +44,8 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
     // Get the image for the post.
     $post_image = DB::getInstance()->get('post_image', array('post_id', '=', $post->post_id));
 
-    // Save into a variable. TODO: un comment
-    //$image = $post_image->first();
+    // Save into a variable.
+    $image = $post_image->first();
 
     // Get the profile image for the user.
     $user_profile = DB::getInstance()->get('users_profile', array('user_id', '=', $post->user_id));
@@ -128,18 +128,9 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                 </div>
 
 
-                <!-- Listing Image Section -->
-                <section id="listing-image-header">
 
-                  <!-- The postings image -->
-                  <div class="hidden-lg hidden-md" id="listing-image">
-                    <img src="<?php echo $image->post_image_url ?>">
-                  </div>
-                  <div class="hidden-sm hidden-xs" id="listing-image-big">
-                    <img src="<?php echo $image->post_image_url ?>">
-                  </div>
 
-                </section>
+
 
                 <!-- Main Posting Content -->
                 <section class="main">
@@ -163,6 +154,12 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
 
                             <div id='listing-title'>
                               <h3>{$post->post_title}</h3>
+                            </div>
+
+                            <div class='form-divider'></div>
+
+                            <div id='listing-image'>
+                              <img src='{$image->post_image_url}'>
                             </div>
 
                             <div class='form-divider'></div>
@@ -241,13 +238,12 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                       ?>
                       <?php
                       if(array_key_exists('feature_post', $_POST)){
-                        if(DB::getInstance()->featured_toggle('posts', $post_id, $fields = array())) {
-                         echo "Post has been featured. You can leave this page when you wish.";
-                       }
+                       if(DB::getInstance()->updateFeatured('posts', '\'' . $post_id . '\'', array(
+                       'featured' => '1'))) {
+                        echo "Post has been featured. You can leave this page when you wish.";
+                        }
                       }
 
-                        $query = "UPDATE posts SET featured = '1' WHERE post_id = {$post_id}";
-                        $result = query($query);
 
                       ?>
                       <hr></div>

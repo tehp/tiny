@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA;;iDAEiD;AAEjD,uBAAuB;AASvB,0BAA0B",
-"sources": ["../../scss/variables.scss"],
+"mappings": "AAAA;;iDAEiD;AAEjD,uBAAuB;AASvB,0BAA0B;ACR1B,aAAc;EACZ,UAAU,EAAE,MAAM;;AAGpB,mBAAoB;EAClB,aAAa,EAAE,IAAI;;AAGrB,KAAM;EACJ,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI",
+"sources": ["../../scss/variables.scss","../../scss/profile/profile.scss"],
 "names": [],
 "file": "profile.css"
 }

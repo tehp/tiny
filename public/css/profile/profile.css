@@ -3,5 +3,14 @@
 /* ========== ========== ========== ========== */
 /** Primary Colours. */
 /** Typography Styling. */
+.profile-area {
+  text-align: center; }
+
+#user-profile-image {
+  margin-bottom: 10px; }
+
+.name {
+  font-weight: bold;
+  font-size: 120%; }
 
 /*# sourceMappingURL=profile.css.map */

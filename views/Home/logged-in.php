@@ -58,7 +58,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                   <div class="container">
                     <!-- Search Bar -->
                       <div class="col-md-10 col-md-offset-1">
-                        <input type="text" class="main-search" placeholder="Search..." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
+                        <input class="nice-input" type="text" class="main-search" placeholder="Search..." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
                       </div>
 
                   </div>
@@ -140,26 +140,27 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 
                                 // NOTE: USE {$image->post_image_url} instead of temp url to image
                                     echo "
-                                  <div class='thumbnail grid-item'>
                                     <a href='{$post_listing_url}'>
+                                      <div class='thumbnail grid-item'>
                                       <img src='{$image->post_image_url}' alt='Post Image'>
                                       <div class='caption'>
-                                        <p class='title'>
+                                        <h4 class='title' style='margin-top: 10px;'>
                                         {$post->post_title}
-                                        </p>
+                                        </h4>
+                                        <hr>
                                         <p class='description'>
                                           {$description}
                                           <a href='{$post_listing_url}' style='color: #68C5F8 !important; font-family: proximanova-regular; letter-spacing: 0.5px;'>read more</a>
                                         </p>
                                         <div class='form-divider' style='margin: 5px 0 9px;'></div>
                                         <small class='stats-text'>
+                                            <img class='hidden-xs' id='user-post-profile-image' style='border-radius: 100px; width: 40px; height: 40px;' src='{$profile_image}' />
                                             <b>Posted: </b> {$post_date}
-                                            <img class='hidden-xs' id='user-post-profile-image' style='width: 50px; height: 50px;' src='{$profile_image}' />
                                         </small>
                                         <tags style='display: none;'>{$post->post_tag}</tags>
                                       </div>
-                                    </a>
                                   </div>
+                                  </a>
                                 ";
                                 }
                             } else {

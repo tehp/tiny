@@ -195,6 +195,40 @@ class DB {
   }
 
   /**
+   * Update a table given a user ID.
+   * @param  String $table   - The table where the value will be updated.
+   * @param  int    $user_id - The id of the row to be updated.
+   * @param  array  $fields  - The fields and values to be updated.
+   * @return boolean         - True if update was successful, false if not.
+   */
+  public function updateFeatured($table, $post_id, $fields) {
+    $set = '';
+    $x = 1;
+
+    // Loop through and count/add the amount of fields to be updated.
+    foreach($fields as $name => $value) {
+      $set .= "{$name} = ?";
+
+      // Add a comma to the end of the string.
+      if ($x < count($fields)) {
+        $set .= ', ';
+      }
+      $x++;
+    }
+
+    // Build the SQL query to be executed.
+    $sql = "UPDATE {$table} SET {$set} WHERE post_id = {$post_id}";
+
+    // If the query was successful, return true.
+    if (!$this->query($sql, $fields)->error()) {
+      return true;
+    }
+
+    // The update failed so return false.
+    return false;
+  }
+
+  /**
    * Toggle if a post is featured.
    * @param  String $table   - The table where the value will be updated.
    * @param  int    $post_id - The id of the post to be changed.
@@ -202,7 +236,8 @@ class DB {
    */
   public function featured_toggle($table, $post_id, $fields) {
     // Build the SQL query to be executed.
-    $sql = "UPDATE {$table} SET featured = '1' WHERE post_id = {$post_id}";
+    $sql = "UPDATE posts SET featured = '1' WHERE post_id = {$post_id}";
+    // UPDATE `posts` SET `featured` = '1' WHERE `posts`.`post_id` = 'post_5a18ea968c95c';
 
     // If the query was successful, return true.
     if (!$this->query($sql, $fields)->error()) {

@@ -5,13 +5,6 @@ $user = new User();
 $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 ?>
 
-<!--
-<nav class="navbar navbar-default" role="navigation">
-          <a href="login.php"  class="btn btn-default navbar-btn" > sign in </a>
-          <a href="register.php" class="btn btn-default navbar-btn" > register </a>
-</nav>
--->
-
 <div class="wrapper">
     <!-- Sidebar Holder -->
     <div id="sidebar-style">
@@ -23,10 +16,9 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
         </div>
 
         <ul class="list-unstyled components">
-            <p>Welcome, <?php echo ucfirst(escape($user->data()->user_first)) ?>!</p>
+            <p>Welcome, <a href="<?php echo $user_profile_url ?>"><?php echo ucfirst(escape($user->data()->user_first)) ?>!</a></p>
 						<li>
                 <a href="/post.php">New Post</a>
-
             </li>
             <li class="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Account</a>
