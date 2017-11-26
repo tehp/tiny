@@ -38,9 +38,28 @@ $user = new User();
                 </div>
 
                 <br><br><br>
-                <p>todo: make this page :)</p>
-                <p>big login and register buttons somewhere on this page</p>
 
+                <script>
+                setTimeout(function(){
+                  document.getElementById("sidebarCollapse").click()
+                }, 1200);
+                </script>
+
+
+                <img class="house-image center-block" src="public/img/house.png">
+                <h1 class="house-title text-center">Go Tiny.</h1>
+
+                <p class="join-btn text-center">
+                <button type="button" style="background-color: #ffd000" class="btn navbar-btn">
+                    <a href="/register.php">Join Our Community</a>
+                </button>
+              </p>
+
+                <hr class="large-seperator">
+
+                <p class="text-center">Join a community of friendly individuals buying and selling anything tiny house related!<br>Signing up an account is easy and only takes 30 seconds.</p>
+
+                <hr class="large-seperator">
 
     </div>
     </div> <!-- end content -->

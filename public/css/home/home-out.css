@@ -3,5 +3,20 @@
 /* ========== ========== ========== ========== */
 /** Primary Colours. */
 /** Typography Styling. */
+.house-image {
+  height: 270px;
+  width: auto;
+  margin-bottom: 40px; }
+
+.house-title {
+  color: black; }
+
+.large-seperator {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 400px; }
+
+.join-btn {
+  margin-top: 10px; }
 
 /*# sourceMappingURL=home-out.css.map */

@@ -40,16 +40,15 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                 <a href="#">Categories</a>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Legal Stuff</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms Of Service</a></li>
-                    <li><a href="#">User Agreement</a></li>
+                    <li><a href="/privacy.php">Privacy Policy</a></li>
+                    <li><a href="/tos.php">Terms Of Service</a></li>
                 </ul>
             </li>
         </ul>
 
         <ul class="list-unstyled CTAs">
-            <li><a href="#" class="download">Contact Us</a></li>
-            <li><a href="#" class="article">Help</a></li>
+            <li><a href="mailto:support@bctinyhousecollective.com" class="download">Contact Us</a></li>
+            <li><a href="mailto:hello@maccraig.net" class="article">Site Support</a></li>
         </ul>
     </nav>
 
