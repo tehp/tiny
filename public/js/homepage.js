@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(window).load(function() {
   var elem = document.querySelector('.grid');
   var iso = new Isotope( elem, {
     itemSelector: '.grid-item',
@@ -15,10 +15,14 @@ var $grid = $('.grid').isotope({
   layoutMode: 'fitRows'
 });
 
-$( document ).ready(function() {
+$( window ).load(function() {
   $grid.imagesLoaded().progress( function() {
     $grid.isotope('layout');
   });
+});
+
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
 });
 
 function redo_layout() {

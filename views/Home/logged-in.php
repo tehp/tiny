@@ -25,8 +25,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     <link rel="stylesheet" href="/public/css/home-in/home-in.css">
 
     <!-- Script Files -->
-    <script src="/public/js/isotope.js" type="text/javascript"></script>
-    <script src="/public/js/homepage.js" type="text/javascript"></script>
+    <!-- <script src="/public/js/homepage.js" type="text/javascript"></script> -->
     <script src="/public/js/search.js" type="text/javascript"></script>
     <script src="/public/js/filter.js" type="text/javascript"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -170,11 +169,20 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
 
                     </div>
                   </div>
+
+                  <script src="/public/js/isotope.js" type="text/javascript"></script>
+                  <script>
+                  var $grid = $('.grid').isotope({
+                    itemSelector: '.grid-item',
+                    transitionDuration: '2',
+                    percentPosition: true,
+                    layoutMode: 'masonry'
+                  });
+                  </script>
+
+
                 </body>
                 </html>
-
-
-
               </div>
     </div>
 </div>

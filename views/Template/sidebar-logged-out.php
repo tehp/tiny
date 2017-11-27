@@ -25,7 +25,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="http://bctinyhousecollective.com/">Main Site</a>
 
             </li>
             <li>

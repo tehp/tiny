@@ -31,7 +31,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                 </ul>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="http://bctinyhousecollective.com/">Main Site</a>
             </li>
             <li>
                 <a href="/featured.php">Featured</a>

@@ -7,7 +7,6 @@
 @media (max-width: 950px) {
   .grid-item {
     width: 100%;
-    height: auto;
     float: left;
     background: #FFFFFF;
     border: 3px solid #1F1913;
@@ -16,8 +15,7 @@
 
 @media (min-width: 951px) {
   .grid-item {
-    width: 48%;
-    height: auto;
+    width: 44%;
     margin-left: 1%;
     margin-right: 1%;
     float: left;

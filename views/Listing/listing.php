@@ -224,6 +224,14 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                             </form>";
                           }
 
+                          if ($poster->user_id == $cur_user_id) {
+                            echo "<br>";
+                            echo "<hr>My Post<br>";
+                            echo "<form method='post'>
+                            <input type='submit' name='delete_post' id='delete_post' value='DELETE POST' /><br/>
+                            </form>";
+                          }
+
                       ?>
 
 
