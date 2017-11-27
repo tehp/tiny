@@ -39,7 +39,7 @@ $user = new User();
       <!-- Register Area -->
       <section class="absolute-center">
         <div class="text-vertical-center">
-          <div class="col-lg-4 col-lg-offset-4">
+          <div class="col-lg-4 col-lg-offset-4 text-center">
             <div class="absolute-center-form">
 
               <!-- Register Form -->
@@ -91,11 +91,11 @@ $user = new User();
 
             <p class="dont-have-account-link text-center" style="margin-top: 15px;">
               By registering, you agree to our
-              <a target="_blank" href="/tos.php">Terms and Services</a>
+              <a target="_blank" style="color: #ffd000" href="/tos.php">Terms and Services</a>
             </p>
             <div class="divider" style="margin-top: 10px; margin-bottom: 3px;"></div>
             <p class="dont-have-account-link text-center" style="margin-top: 15px; margin-bottom: 15px;">
-              Already have an account? <a target="_blank" href="/login.php">Log In</a>
+              Already have an account? <a target="_blank" style="color: #ffd000" href="/login.php">Log In</a>
             </p>
           </div>
 

@@ -31,8 +31,7 @@ $user = new User();
     <div id="content">
 
       <div class="navbar-header">
-          <button type="button" style="backgr
-          ound-color: #ffd000" id="sidebarCollapse" class="btn navbar-btn">
+          <button type="button" style="background-color: #ffd000" id="sidebarCollapse" class="btn navbar-btn">
               <i class="glyphicon glyphicon-align-left"></i>
               <span></span>
           </button>
@@ -41,22 +40,21 @@ $user = new User();
       <!-- Header -->
       <section class="absolute-center">
           <div class="text-vertical-center">
-            <div class="col-lg-4 col-lg-offset-4">
+            <div class="col-lg-4 col-lg-offset-4 text-center">
 
               <!-- Sign In Form -->
-              <div class="absolute-center-form">
               <form method="post">
 
                 <div class="divider"></div>
 
                 <!-- User Email -->
-                <div class="input-group input-group-sm margin-bottom-15">
-                  <input style="margin-bottom: 10px;" required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
+                <div class="field margin-bottom-15">
+                  <input class="form-control" style="margin-bottom: 10px;" required="true" type="email" name="user_email" class="input-centered" placeholder="Email Address" id="user_email">
                 </div>
 
                 <!-- User Password -->
-                <div class="input-group input-group-sm margin-bottom-20">
-                  <input style="margin-bottom: 10px;" required="true" type="password" name="user_password" placeholder="Password" id="user_password">
+                <div class="field margin-bottom-20">
+                  <input class="form-control" style="margin-bottom: 10px;" required="true" type="password" name="user_password" placeholder="Password" id="user_password">
                   </a>
                 </div>
 
@@ -69,10 +67,9 @@ $user = new User();
 
               <p class="dont-have-account-link text-center">
                 Don't have an account?
-                <a target="_blank" href="/register.php">Sign Up</a>
+                <a target="_blank" style="color: #ffd000" href="/register.php">Sign Up</a>
               </p>
 
-            </div>
 
       <!-- Form Error Display -->
       <?php
