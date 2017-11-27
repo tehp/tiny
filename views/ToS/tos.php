@@ -35,16 +35,24 @@
     }
     ?>
 
-    <!-- Main Content -->
-    <section class="main">
-       <div class="container legal-area">
-         <h2 class="center">Terms of Service</h2>
-         
-      </div>
-    </section>
+    <div id="content">
+                <div class="navbar-header">
+                    <button type="button" style="background-color: #ffd000" id="sidebarCollapse" class="btn navbar-btn">
+                        <i class="glyphicon glyphicon-align-left"></i>
+                        <span></span>
+                    </button>
+                </div>
+                <br><br><br>
 
-    <!-- Footer Section -->
-    <?php View::footer(); ?>
+                <!-- Main Content -->
+                <section class="main">
+                  <div class="container legal-area">
+                     <h2 class="center">Terms Of Service</h2>
+                     <p>lorem</p>
+                  </div>
+                </section>
+
+      </div>
 
   </body>
 </html>

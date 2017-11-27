@@ -42,7 +42,7 @@ $user = new User();
                 <script>
                 setTimeout(function(){
                   document.getElementById("sidebarCollapse").click()
-                }, 1200);
+                }, 700);
                 </script>
 
 
