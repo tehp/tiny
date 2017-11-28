@@ -5,3 +5,5 @@ npm-debug.log
 /node_modules
 /vendor
 .sass-cache
+/uploads/post_images/*.*
+/uploads/profile_images/*.*
