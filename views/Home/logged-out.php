@@ -63,6 +63,8 @@ $user = new User();
 
                 <hr class="large-seperator">
 
+                <img class="featured-image center-block" src="public/img/featured.png">
+
 
                 <div class="col-md-10 col-md-offset-1 grid">
 
@@ -88,7 +90,7 @@ $user = new User();
                           }
 
                           // Format the description.
-                          $description = substr($post->post_description, 0, 100) . '...';
+                          $description = substr($post->post_description, 0, 200) . '';
 
                           // Convert the date.
                           $post_date = strtotime($post->post_date);
@@ -110,7 +112,6 @@ $user = new User();
 
                           // NOTE: USE {$image->post_image_url} instead of temp url to image
                               echo "
-                              <a href='{$post_listing_url}'>
                                 <div class='thumbnail grid-item'>
                                 <img src='{$image->post_image_url}' alt='Post Image'>
                                 <div class='caption'>
@@ -120,7 +121,6 @@ $user = new User();
                                   <hr>
                                   <p class='description'>
                                     {$description}
-                                    <a href='{$post_listing_url}' style='color: #68C5F8 !important; font-family: proximanova-regular; letter-spacing: 0.5px;'>read more</a>
                                   </p>
                                   <div class='form-divider' style='margin: 5px 0 9px;'></div>
                                   <small class='stats-text'>
@@ -130,7 +130,6 @@ $user = new User();
                                   <tags style='display: none;'>{$post->post_tag}</tags>
                                 </div>
                             </div>
-                            </a>
                           ";
                           }
                         }
