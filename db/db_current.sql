@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_pickup_location` varchar(255) NOT NULL,
   `post_tag` varchar(255) NOT NULL,
   `post_date` datetime NOT NULL,
+  `featured` int(8) NOT NULL,
   PRIMARY KEY (`post_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
