@@ -26,7 +26,7 @@ $(document).ready(function() {
             }
         });
         //redo_layout();
-        //$grid.isotope('layout');
+        $grid.isotope('layout');
         // moved to redo_layout() function
     });
 });;;
