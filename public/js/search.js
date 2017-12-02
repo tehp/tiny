@@ -27,6 +27,6 @@ $(document).ready(function() {
         });
         //redo_layout();
         $grid.isotope('layout');
-        // moved to redo_layout() function
+        // use layout directly instead of using redo_layout function
     });
 });;;
