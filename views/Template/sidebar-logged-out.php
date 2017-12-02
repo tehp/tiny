@@ -29,7 +29,6 @@
 
             </li>
             <li>
-                <a href="#">Categories</a>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Legal Stuff</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li><a href="/privacy.php">Privacy Policy</a></li>

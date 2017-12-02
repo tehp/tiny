@@ -37,7 +37,6 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                 <a href="/featured.php">Featured</a>
             </li>
             <li>
-                <a href="#">Categories</a>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Legal Stuff</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li><a href="/privacy.php">Privacy Policy</a></li>
