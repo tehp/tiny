@@ -54,7 +54,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                 <br><br><br>
 
                 <!-- Main Content -->
-                
+
                   <!-- Search Bar -->
                   <input class="nice-input center-block" type="text" class="main-search" placeholder="Search..." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
 
@@ -137,7 +137,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                                     echo "
                                     <a href='{$post_listing_url}'>
                                       <div class='thumbnail grid-item'>
-                                      <img src='{$image->post_image_url}' alt='Post Image'>
+                                      <img src='{$image->post_image_url}' alt='Post Image' style='border-radius: 3px;'>
                                       <div class='caption'>
                                         <h4 class='title' style='margin-top: 10px;'>
                                         {$post->post_title}

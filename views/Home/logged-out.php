@@ -113,7 +113,7 @@ $user = new User();
                           // NOTE: USE {$image->post_image_url} instead of temp url to image
                               echo "
                                 <div class='thumbnail grid-item'>
-                                <img src='{$image->post_image_url}' alt='Post Image'>
+                                <img src='{$image->post_image_url}' alt='Post Image' style='border-radius: 3px;'>
                                 <div class='caption'>
                                   <h4 class='title' style='margin-top: 10px;'>
                                   {$post->post_title}

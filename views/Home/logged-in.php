@@ -137,7 +137,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                                     echo "
                                     <a href='{$post_listing_url}'>
                                       <div class='thumbnail grid-item'>
-                                      <img src='{$image->post_image_url}' alt='Post Image'>
+                                      <img src='{$image->post_image_url}' alt='Post Image' style='border-radius: 3px;'>
                                       <div class='caption'>
                                         <h4 class='title' style='margin-top: 10px;'>
                                         {$post->post_title}
