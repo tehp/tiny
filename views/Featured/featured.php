@@ -25,6 +25,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
     <link rel="stylesheet" href="/public/css/home-in/home-in.css">
 
     <!-- Script Files -->
+    <!-- <script src="/public/js/homepage.js" type="text/javascript"></script> -->
     <script src="/public/js/search.js" type="text/javascript"></script>
     <script src="/public/js/filter.js" type="text/javascript"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -50,26 +51,22 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                         <span></span>
                     </button>
                 </div>
+                <br><br><br>
 
                 <!-- Main Content -->
+                
+                  <!-- Search Bar -->
+                  <input class="nice-input center-block" type="text" class="main-search" placeholder="Search..." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
 
-                  <div class="container">
-                    <!-- Search Bar -->
-                      <div class="col-md-10 col-md-offset-1">
-                        <input class="nice-input" type="text" class="main-search" placeholder="Search..." id="search-2" name="search-2" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Stores found" autocomplete="off">
-                      </div>
 
-                  </div>
-
-                  <div class="col-md-10 col-md-offset-1" style="margin-top: 0px; margin-bottom: 35px; background-color: #ebeff3; color: #898c90; border-top-right-radius: 2px; border-top-left-radius: 2px; border-top: 4px solid #d6dee4;" class="row" id="filters">
+                  <div style="margin-top: 10px; margin-bottom: 35px; background-color: #ebeff3; color: black; border-top-right-radius: 2px; border-top-left-radius: 2px; border-top: 4px solid #ffd000;" class="row center-block" id="filters">
                       <div class="radio">
+                        <label class="radio-inline"><input id="rad0" type="radio" name="optradio">No Filter</label>
                         <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Housing</label>
                         <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Land</label>
                         <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Building Supplies</label>
                         <label class="radio-inline"><input id="rad4" type="radio" name="optradio">Services</label>
-                        <span class="hidden-xs">
                         <label class="radio-inline"><input id="rad5" type="radio" name="optradio">Consulting</label>
-                      </span>
                     </div>
                   </div>
 
@@ -94,7 +91,7 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                       ?>
 
                       <!-- Display Grid For Posts. -->
-                      <div class="col-md-10 col-md-offset-1 grid">
+                      <div class="grid">
 
 
 
@@ -179,11 +176,9 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                   });
                   </script>
 
+
                 </body>
                 </html>
-
-
-
               </div>
     </div>
 </div>

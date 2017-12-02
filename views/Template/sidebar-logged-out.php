@@ -77,6 +77,9 @@
              $('#sidebar, #content').toggleClass('active');
              $('.collapse.in').toggleClass('in');
              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             setTimeout(function(){
+               $grid.isotope('layout');
+             }, 400);
          });
      });
  </script>

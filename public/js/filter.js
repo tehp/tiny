@@ -1,5 +1,9 @@
 $(document).ready(function() {
     window.filter = "";
+    $("#rad0").click(function() {
+        filter = "";
+        $('#search-2').trigger('keyup');
+    });
     $("#rad1").click(function() {
         filter = "housing";
         $('#search-2').trigger('keyup');

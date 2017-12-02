@@ -86,6 +86,9 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
              $('#sidebar, #content').toggleClass('active');
              $('.collapse.in').toggleClass('in');
              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             setTimeout(function(){
+               $grid.isotope('layout');
+             }, 400);
          });
      });
  </script>

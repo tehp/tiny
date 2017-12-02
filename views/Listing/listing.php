@@ -137,7 +137,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                   <div class="container" id="area">
 
                     <!-- Posting Information -->
-                    <div class="col-md-10 col-md-offset-1">
+                    <div>
 
                       <?php
 
@@ -156,16 +156,16 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                               <h3>{$post->post_title}</h3>
                             </div>
 
-                            <div class='form-divider'></div>
+                            <hr>
 
-                            <div id='listing-image'>
+                            <div class='image-main'>
                               <img src='{$image->post_image_url}'>
                             </div>
 
-                            <div class='form-divider'></div>
+                            <hr>
 
                             <div id='listing-poster-info'>
-                              <img style='width: 100px; height: 100px;' src='{$profile_image}' id='profile-img' alt='Profile Image'/>
+                              <img style='width: 60px; height: 60px; border-radius: 5px; margin-bottom: 5px;' src='{$profile_image}' id='profile-img' alt='Profile Image'/>
                               <p id='posted-by'>
                               Posted By
                               <a href='{$user_profile_url}'>{$poster->user_first} {$poster->user_last}</a><br>
@@ -173,9 +173,10 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                               </p>
                             </div>
 
-                            <div class='form-divider'></div>
+                            <hr>
 
                             <p>{$post->post_description}</p>
+
                             <hr>
 
                             <small>
@@ -217,7 +218,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                             echo "<br>";
                             echo "<hr>Administration Tools:<br>";
                             echo "<form method='post'>
-                            <input type='submit' name='feature_post' id='feature_post' value='FEATURE POST' /><br/>
+                            <input type='submit' name='feature_post' id='feature_post' value='TOGGLE FEATURED STATUS' /><br/>
                             <br>
                             <input type='submit' name='delete_post' id='delete_post' value='DELETE POST' /><br/>
 
@@ -247,7 +248,7 @@ if (isset($_GET["post"]) && ctype_alnum($_GET["post"]) && strlen($_GET["post"]) 
                       <?php
                       if(array_key_exists('feature_post', $_POST)){
                        if(DB::getInstance()->updateFeatured('posts', '\'' . $post_id . '\'', array(
-                       'featured' => '1'))) {
+                       'featured' => 'featured + 1'))) {
                         echo "Post has been featured. You can leave this page when you wish.";
                         }
                       }

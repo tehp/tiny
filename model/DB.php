@@ -217,7 +217,7 @@ class DB {
     }
 
     // Build the SQL query to be executed.
-    $sql = "UPDATE {$table} SET {$set} WHERE post_id = {$post_id}";
+    $sql = "UPDATE {$table} SET featured = featured + 1 WHERE post_id = {$post_id}";
 
     // If the query was successful, return true.
     if (!$this->query($sql, $fields)->error()) {

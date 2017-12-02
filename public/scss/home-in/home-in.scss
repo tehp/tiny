@@ -3,6 +3,13 @@
 // Blank sass file to be created soon!
 //
 
+.radio-inline {
+  padding: 5px;
+}
+
+#search-2, #filters {
+  width: 95%;
+}
 
 @media (max-width: 950px) {
   .grid-item {
@@ -15,7 +22,7 @@
 
 @media (min-width: 951px) {
   .grid-item {
-    width: 44%;
+    width: 48%;
     margin-left: 1%;
     margin-right: 1%;
     float: left;

@@ -65,7 +65,7 @@ $user = new User();
 
                 <img class="featured-image center-block" src="public/img/featured.png">
 
-
+                <a href="/register.php">
                 <div class="col-md-10 col-md-offset-1 grid">
 
 
@@ -139,6 +139,7 @@ $user = new User();
                       ?>
 
               </div>
+            </a>
 
 
 
