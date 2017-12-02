@@ -34,7 +34,12 @@ $user = new User();
     <!-- Page Content Holder -->
     <div id="content">
 
-
+      <div class="navbar-header row">
+          <button type="button" style="background-color: #ffd000" id="sidebarCollapse" class="btn navbar-btn">
+              <i class="glyphicon glyphicon-align-left"></i>
+              <span></span>
+          </button>
+      </div>
 
       <!-- Register Area -->
       <section class="absolute-center">
@@ -44,6 +49,10 @@ $user = new User();
 
               <!-- Register Form -->
               <form method="post">
+
+                <br><br><br>
+                <h2 class="center">Register</h2>
+                <hr>
 
                 <div class="divider"></div>
 
