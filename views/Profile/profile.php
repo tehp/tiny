@@ -181,11 +181,7 @@ if (isset($_GET["user"]) && ctype_alnum($_GET["user"]) && strlen($_GET["user"]) 
                         echo "
                       <!-- User Post -->
                       <div class='row'>
-                        <div class='col-md-12 text-center'>
-                          <div class='user-post-display' style='padding-bottom: 25px;'>
-                            <h3>There are no postings by this user!</h3>
-                          </div>
-                        </div>
+                            <h3>This person hasn't made any posts yet. Shame!</h3>
                       </div>
                       ";
                     }
