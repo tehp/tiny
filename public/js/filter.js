@@ -5,23 +5,31 @@ $(document).ready(function() {
         $('#search-2').trigger('keyup');
     });
     $("#rad1").click(function() {
-        filter = "housing";
+        filter = "Housing Sale";
         $('#search-2').trigger('keyup');
     });
     $("#rad2").click(function() {
-        filter = "land";
+        filter = "Housing Rent";
         $('#search-2').trigger('keyup');
     });
     $("#rad3").click(function() {
-        filter = "supplies";
+        filter = "Lot Sale";
         $('#search-2').trigger('keyup');
     });
     $("#rad4").click(function() {
-        filter = "services";
+        filter = "Lot Rent";
         $('#search-2').trigger('keyup');
     });
     $("#rad5").click(function() {
-        filter = "consulting";
+        filter = "Materials";
+        $('#search-2').trigger('keyup');
+    });
+    $("#rad6").click(function() {
+        filter = "Services";
+        $('#search-2').trigger('keyup');
+    });
+    $("#rad7").click(function() {
+        filter = "Community";
         $('#search-2').trigger('keyup');
     });
 });

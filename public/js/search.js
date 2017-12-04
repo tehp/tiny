@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    var t=setInterval(layoutItems,1000);
+    function layoutItems() {
+      $grid.isotope('layout');
+    }
+
     var lastentry = "";
 
     $('#search-2').keyup(function(event) {
@@ -27,6 +32,7 @@ $(document).ready(function() {
         });
         //redo_layout();
         $grid.isotope('layout');
+        //setTimeout(function(){ $grid.isotope('reLayout'); }, 1000);
         // use layout directly instead of using redo_layout function
     });
 });;;

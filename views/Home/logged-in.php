@@ -62,11 +62,13 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                   <div style="margin-top: 10px; margin-bottom: 35px; background-color: #ebeff3; color: black; border-top-right-radius: 2px; border-top-left-radius: 2px; border-top: 4px solid #ffd000;" class="row center-block" id="filters">
                       <div class="radio">
                         <label class="radio-inline"><input id="rad0" type="radio" name="optradio">No Filter</label>
-                        <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Housing</label>
-                        <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Land</label>
-                        <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Building Supplies</label>
-                        <label class="radio-inline"><input id="rad4" type="radio" name="optradio">Services</label>
-                        <label class="radio-inline"><input id="rad5" type="radio" name="optradio">Consulting</label>
+                        <label class="radio-inline"><input id="rad1" type="radio" name="optradio">Housing Sale</label>
+                        <label class="radio-inline"><input id="rad2" type="radio" name="optradio">Housing Rental</label>
+                        <label class="radio-inline"><input id="rad3" type="radio" name="optradio">Lot Sales</label>
+                        <label class="radio-inline"><input id="rad4" type="radio" name="optradio">Lot Rental</label>
+                        <label class="radio-inline"><input id="rad5" type="radio" name="optradio">Materials</label>
+                        <label class="radio-inline"><input id="rad6" type="radio" name="optradio">Services</label>
+                        <label class="radio-inline"><input id="rad7" type="radio" name="optradio">Community</label>
                     </div>
                   </div>
 
@@ -79,11 +81,11 @@ $user_profile_url = '/profile.php?user=' . substr($user->data()->user_id, 5);
                       <?php /** Check whether the user had a successful post. */
                       if (Session::exists('successful_post')) { // Start
                       ?>
-                          <div class="alert alert-success alert-dismissible col-lg-10 col-lg-offset-1" role="alert">
+                          <div style="margin-left: 10px; margin-right: 10px;"class="alert alert-success alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <?php echo Session::flash('successful_post'); ?>
                           </div>
-
+                          <br>
                       <?php
 
                       } // End

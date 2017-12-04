@@ -24,10 +24,11 @@ if (Session::exists('image_error')) {
 
 <section class="main">
   <div class="container">
+    <br><br><br>
 
     <!-- New Post Header -->
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3" id="post-form-header">
+      <div class="text-center col-sm-6 col-sm-offset-3" id="post-form-header">
         <h3 id="new-post-title">Create a New Listing</h3>
       </div>
     </div>
@@ -96,23 +97,31 @@ if (Session::exists('image_error')) {
               <div class="btn-group col-md-12" data-toggle="buttons">
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="housing">Housing
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Housing Sale">Housing Sale
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="land">Land
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Housing Rent">Housing Rental
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="supplies">Building Supplies
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Lot Sale">Lot Sales
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="services">Services
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Lot Rent">Lot Rental
                   </label>
 
                   <label class="btn btn-default post-tags">
-                      <input type="checkbox" name="post_tag[]" id="post_tag" value="consulting">Consulting
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Materials">Materials
+                  </label>
+
+                  <label class="btn btn-default post-tags">
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Services">Services
+                  </label>
+
+                  <label class="btn btn-default post-tags">
+                      <input type="checkbox" name="post_tag[]" id="post_tag" value="Community">Community
                   </label>
 
 
@@ -124,13 +133,13 @@ if (Session::exists('image_error')) {
 
             <!-- Required Field Reminder -->
             <div class="form-group">
-              <p><span class="require">*</span> required fields</p>
+              <small><span class="require">*</span> required fields</small>
             </div>
 
             <!-- Submit/Cancel Buttons -->
             <div class="form-group">
               <input type="hidden" name="token" value="<?php echo escape(Token::generate()); ?>">
-              <button type="submit" value="upload" id="post-btn" class="btn btn-primary">Create Listing</button>
+              <button type="submit" value="upload" id="post-btn" class="btn" style="background-color: #ffd300">Create Listing</button>
             </div>
             <p class="disclaimer text-center">
               By posting, you agree to our
