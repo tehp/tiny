@@ -16,7 +16,7 @@ True White: `#FFFFFF`<br>
 Really Bright Light Blue: `#68C5F8`<br>
 Sad Dark Green: `#16313A`<br>
 
-## Instalation
+## Installation
 This section contains a guide on installing the Tiny House Marketplace application. 
 
 ### Dependencies
